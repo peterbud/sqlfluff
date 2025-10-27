@@ -599,3 +599,44 @@ test_pass_oracle_slash_with_extra_spacing:
   configs:
     core:
       dialect: oracle
+
+test_pass_tsql_with_semicolon_require_final:
+  # Test for TSQL where semicolon is parsed inside the statement
+  # Ensures we don't add extra semicolons when one already exists
+  pass_str: |
+    SELECT a
+    FROM table1;
+  configs:
+    core:
+      dialect: tsql
+    rules:
+      convention.terminator:
+        require_final_semicolon: true
+
+test_fail_tsql_without_semicolon_require_final:
+  # Test for TSQL that missing semicolon is detected
+  fail_str: |
+    SELECT a
+    FROM table1
+  fix_str: |
+    SELECT a
+    FROM table1;
+  configs:
+    core:
+      dialect: tsql
+    rules:
+      convention.terminator:
+        require_final_semicolon: true
+
+test_pass_tsql_with_semicolon_multiline:
+  # Test for TSQL with multiline_newline setting
+  pass_str: |
+    SELECT a
+    FROM table1;
+  configs:
+    core:
+      dialect: tsql
+    rules:
+      convention.terminator:
+        require_final_semicolon: true
+        multiline_newline: true
