@@ -53,6 +53,12 @@ ALTER TABLE [Production].[ProductCostHistory]
 CHECK CONSTRAINT [FK_ProductCostHistory_Product_ProductID]
 GO
 
+ALTER TABLE [dbo].[Attachment]
+WITH NOCHECK ADD CONSTRAINT [FK_Attachment_EmailMessage]
+FOREIGN KEY ([EmailMessageID])
+REFERENCES [dbo].[EmailMessage] ([EmailMessageID])
+GO
+
 ALTER TABLE my_table
 ADD my_col_1 INT
   , my_col_2 INT
