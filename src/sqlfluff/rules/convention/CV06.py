@@ -346,6 +346,12 @@ class Rule_CV06(BaseRule):
                     semi_colon_exist_flag = True
             elif segment.is_code:
                 is_one_line = self._is_one_line_statement(parent_segment, segment)
+                # In some dialects (e.g., TSQL), the semicolon may be parsed
+                # inside the statement rather than at the file level.
+                # Check recursively for any statement terminators within this segment.
+                terminators = list(segment.recursive_crawl("statement_terminator"))
+                if terminators and self._is_segment_semicolon(terminators[-1]):
+                    semi_colon_exist_flag = True
                 break
             elif not segment.is_meta:
                 before_segment.append(segment)
