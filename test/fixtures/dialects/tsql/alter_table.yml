@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: 5de14ee956b14a5f09c9c51727b853ca119ab45abb334d90527c0b40ff275464
+_hash: 2a92a0b10959f00060e0cef0cf36b00d87e1cd79485829424ada88d11b512aed
 file:
 - batch:
     statement:
@@ -382,6 +382,42 @@ file:
       - keyword: CONSTRAINT
       - object_reference:
           quoted_identifier: '[FK_ProductCostHistory_Product_ProductID]'
+    go_statement:
+      keyword: GO
+- batch:
+    statement:
+      alter_table_statement:
+      - keyword: ALTER
+      - keyword: TABLE
+      - table_reference:
+        - quoted_identifier: '[dbo]'
+        - dot: .
+        - quoted_identifier: '[Attachment]'
+      - keyword: WITH
+      - keyword: NOCHECK
+      - keyword: ADD
+      - table_constraint:
+        - keyword: CONSTRAINT
+        - object_reference:
+            quoted_identifier: '[FK_Attachment_EmailMessage]'
+        - keyword: FOREIGN
+        - keyword: KEY
+        - bracketed:
+            start_bracket: (
+            column_reference:
+              quoted_identifier: '[EmailMessageID]'
+            end_bracket: )
+        - references_constraint_grammar:
+            keyword: REFERENCES
+            table_reference:
+            - quoted_identifier: '[dbo]'
+            - dot: .
+            - quoted_identifier: '[EmailMessage]'
+            bracketed:
+              start_bracket: (
+              column_reference:
+                quoted_identifier: '[EmailMessageID]'
+              end_bracket: )
     go_statement:
       keyword: GO
 - batch:

@@ -4347,7 +4347,7 @@ class AlterTableStatementSegment(BaseSegment):
                 Sequence(
                     Sequence(
                         "WITH",
-                        "CHECK",
+                        OneOf("CHECK", "NOCHECK"),
                         optional=True,
                     ),
                     "ADD",
