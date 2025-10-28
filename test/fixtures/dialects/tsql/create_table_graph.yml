@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: 2095f14e269aad79e7f0a72e201c36eacf20e935ad462f7bc8dd0a1ca69df9f4
+_hash: 09ae4f1a00e0102e26f10b4c278391a8da0bec9747c7255efba5151a570c5274
 file:
   batch:
   - statement:
@@ -37,7 +37,7 @@ file:
         - end_bracket: )
       - keyword: AS
       - keyword: NODE
-      - statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       create_table_graph_statement:
       - keyword: CREATE
@@ -61,7 +61,7 @@ file:
         - end_bracket: )
       - keyword: AS
       - keyword: EDGE
-      - statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       create_table_graph_statement:
       - keyword: CREATE
@@ -70,7 +70,7 @@ file:
           naked_identifier: likes
       - keyword: AS
       - keyword: EDGE
-      - statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       create_table_graph_statement:
       - keyword: CREATE
@@ -102,7 +102,7 @@ file:
           end_bracket: )
       - keyword: AS
       - keyword: EDGE
-      - statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       create_table_graph_statement:
       - keyword: CREATE
@@ -137,4 +137,4 @@ file:
           end_bracket: )
       - keyword: AS
       - keyword: EDGE
-      - statement_terminator: ;
+  - statement_terminator: ;

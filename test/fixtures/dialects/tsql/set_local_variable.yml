@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: 5fc1f18065f3833fcf98078b3ed4a14e29e8f8ae8c18169d0b19c982769ca340
+_hash: 05dd33899d2b618819ef4bebd4e80e3d0dd1061d77807490455aea9eb61edfc9
 file:
 - batch:
   - statement:
@@ -18,7 +18,7 @@ file:
               expression:
                 integer_literal: '20'
               end_bracket: )
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       set_local_variable_segment:
         keyword: SET
@@ -34,7 +34,7 @@ file:
           keyword: SELECT
           select_clause_element:
             parameter: '@myVar'
-        statement_terminator: ;
+  - statement_terminator: ;
   - go_statement:
       keyword: GO
 - batch:
@@ -50,7 +50,7 @@ file:
               expression:
                 integer_literal: '25'
               end_bracket: )
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       set_local_variable_segment:
         keyword: SET
@@ -114,14 +114,14 @@ file:
             comparison_operator:
               raw_comparison_operator: '='
             parameter: '@state'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       declare_segment:
         keyword: DECLARE
         parameter: '@NewBalance'
         data_type:
           data_type_identifier: INT
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       set_local_variable_segment:
         keyword: SET
@@ -148,7 +148,7 @@ file:
           keyword: SELECT
           select_clause_element:
             parameter: '@NewBalance'
-        statement_terminator: ;
+  - statement_terminator: ;
   - go_statement:
       keyword: GO
 - batch:
@@ -180,7 +180,7 @@ file:
       - keyword: DECLARE
       - parameter: '@my_variable'
       - keyword: CURSOR
-      - statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       set_local_variable_segment:
         keyword: SET
@@ -204,7 +204,7 @@ file:
       - keyword: DECLARE
       - parameter: '@CursorVar'
       - keyword: CURSOR
-      - statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       set_local_variable_segment:
         keyword: SET
@@ -244,7 +244,7 @@ file:
                   naked_identifier: LASTNAME
                 keyword: LIKE
                 quoted_literal: "'B%'"
-            statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       open_cursor_statement:
         keyword: OPEN
@@ -304,7 +304,7 @@ file:
         parameter: '@rows'
         data_type:
           data_type_identifier: INT
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       set_local_variable_segment:
         keyword: SET
@@ -344,7 +344,7 @@ file:
           keyword: SELECT
           select_clause_element:
             parameter: '@rows'
-        statement_terminator: ;
+  - statement_terminator: ;
   - go_statement:
       keyword: GO
 - batch:

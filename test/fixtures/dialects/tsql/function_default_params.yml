@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: 87f025e6890f5c7eb0030c5856906b301f85f8aa2496d90a5dcd5c4f18a31b5e
+_hash: f1d0552f5597d5c1aca824d43d36e23fd014b0acf356326541bade5ec3c186bc
 file:
   batch:
     statement:
@@ -46,5 +46,5 @@ file:
                   keyword: return
                   expression:
                     integer_literal: '1'
-                  statement_terminator: ;
+            - statement_terminator: ;
             - keyword: end

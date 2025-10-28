@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: 133f6821f8c566a867edc5e4af101f1ed2bd0d8f1a9ec2d7e2d69a945df52100
+_hash: 504cbb7836b22fa2323a149931a5a73a7c96c91c5a404eed2a58688e7d8cbac6
 file:
 - batch:
   - statement:
@@ -28,7 +28,7 @@ file:
               - quoted_literal: "'2021-01-01 00:00:00.0000000'"
               - keyword: AND
               - quoted_literal: "'2022-01-01 00:00:00.0000000'"
-          statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -48,7 +48,7 @@ file:
               - keyword: FOR
               - keyword: SYSTEM_TIME
               - keyword: ALL
-          statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -71,7 +71,7 @@ file:
               - quoted_literal: "'2021-01-01 00:00:00.0000000'"
               - keyword: TO
               - quoted_literal: "'2022-01-01 00:00:00.0000000'"
-          statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -93,7 +93,7 @@ file:
               - keyword: AS
               - keyword: OF
               - quoted_literal: "'2021-01-01 00:00:00.0000000'"
-          statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -120,7 +120,7 @@ file:
                 - comma: ','
                 - quoted_literal: "'2022-01-01 00:00:00.0000000'"
                 - end_bracket: )
-          statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       declare_segment:
         keyword: DECLARE
@@ -131,7 +131,7 @@ file:
           raw_comparison_operator: '='
         expression:
           quoted_literal: "'2021-01-01 00:00:00'"
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       declare_segment:
         keyword: DECLARE
@@ -142,7 +142,7 @@ file:
           raw_comparison_operator: '='
         expression:
           quoted_literal: "'2022-01-01 00:00:00'"
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -165,7 +165,7 @@ file:
               - parameter: '@StartTime'
               - keyword: TO
               - parameter: '@EndTime'
-          statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       declare_segment:
         keyword: DECLARE
@@ -176,7 +176,7 @@ file:
           raw_comparison_operator: '='
         expression:
           quoted_literal: "'2021-01-01 00:00:00'"
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -198,7 +198,7 @@ file:
               - keyword: AS
               - keyword: OF
               - parameter: '@PointInTime'
-          statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       create_table_statement:
       - keyword: CREATE
@@ -269,7 +269,7 @@ file:
               raw_comparison_operator: '='
           - keyword: SCHEMA_ONLY
           - end_bracket: )
-      - statement_terminator: ;
+  - statement_terminator: ;
   - statement_terminator: ;
   - go_statement:
       keyword: GO
@@ -382,11 +382,11 @@ file:
               - naked_identifier: DepartmentHistory
               end_bracket: )
           - end_bracket: )
-      - statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
-    statement:
+  - statement:
       create_table_statement:
       - keyword: CREATE
       - keyword: TABLE
@@ -442,12 +442,12 @@ file:
             object_reference:
               naked_identifier: COLUMNC
             end_bracket: )
-      - statement_terminator: ;
-    statement_terminator: ;
-    go_statement:
+  - statement_terminator: ;
+  - statement_terminator: ;
+  - go_statement:
       keyword: GO
 - batch:
-    statement:
+  - statement:
       create_table_statement:
       - keyword: CREATE
       - keyword: TABLE
@@ -515,9 +515,9 @@ file:
             - date_part: INFINITE
             - end_bracket: )
           - end_bracket: )
-      - statement_terminator: ;
-    statement_terminator: ;
-    go_statement:
+  - statement_terminator: ;
+  - statement_terminator: ;
+  - go_statement:
       keyword: GO
 - batch:
     statement:
@@ -595,7 +595,7 @@ file:
               - naked_identifier: DepartmentHistory
               end_bracket: )
           - end_bracket: )
-      - statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -690,7 +690,7 @@ file:
               - end_bracket: )
               end_bracket: )
           - end_bracket: )
-      - statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -759,7 +759,7 @@ file:
               numeric_literal: '2'
               end_bracket: )
           - end_bracket: )
-      - statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -830,7 +830,7 @@ file:
               raw_comparison_operator: '='
           - keyword: 'OFF'
           - end_bracket: )
-      - statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -926,7 +926,7 @@ file:
           - object_reference:
               naked_identifier: constraint4
           - end_bracket: )
-      - statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -1017,6 +1017,6 @@ file:
             - keyword: 'ON'
             - end_bracket: )
           - end_bracket: )
-      - statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO

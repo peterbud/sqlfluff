@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: 76b88a6d72fb613db9df71b02500964c5cdb9a7a82a68bbc1435bc92d70b817c
+_hash: a35ea34765f30e18f2ef24a2cc3db6f6e2dc09f52fa8ecda04ccfbb821742ca1
 file:
 - batch:
     statement:
@@ -49,7 +49,7 @@ file:
             - keyword: BY
             - column_reference:
                 naked_identifier: LASTNAME
-            statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       open_cursor_statement:
         keyword: OPEN
@@ -125,7 +125,7 @@ file:
               expression:
                 integer_literal: '50'
               end_bracket: )
-      - statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       declare_segment:
         keyword: DECLARE
@@ -167,7 +167,7 @@ file:
             - comma: ','
             - column_reference:
                 naked_identifier: FIRSTNAME
-            statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       open_cursor_statement:
         keyword: OPEN
@@ -268,7 +268,7 @@ file:
         - comma: ','
         - column_reference:
             naked_identifier: FIRSTNAME
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       declare_segment:
       - keyword: DECLARE
@@ -303,7 +303,7 @@ file:
           - comma: ','
           - column_reference:
               quoted_identifier: '[FirstName]'
-          statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       open_cursor_statement:
         keyword: OPEN

@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: ed19ed9216c31fdf3b8e35dacee92b2e7f5265e1497132501e17abc63a26376b
+_hash: 141f0eccf80a1e67bfdd6cef300650747bfb476b7e397df282d78c042881abd3
 file:
   batch:
   - statement:
@@ -16,7 +16,7 @@ file:
           raw_comparison_operator: '='
         expression:
           integer_literal: '0'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -26,7 +26,7 @@ file:
               parameter: '@I'
               binary_operator: +
               integer_literal: '1'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -38,7 +38,7 @@ file:
               - raw_comparison_operator: +
               - raw_comparison_operator: '='
               integer_literal: '2'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -48,7 +48,7 @@ file:
               parameter: '@I'
               binary_operator: '-'
               integer_literal: '3'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -60,7 +60,7 @@ file:
               - raw_comparison_operator: '-'
               - raw_comparison_operator: '='
               integer_literal: '4'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -70,7 +70,7 @@ file:
               parameter: '@I'
               binary_operator: '*'
               integer_literal: '5'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -82,7 +82,7 @@ file:
               - raw_comparison_operator: '*'
               - raw_comparison_operator: '='
               integer_literal: '6'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -92,7 +92,7 @@ file:
               parameter: '@I'
               binary_operator: /
               integer_literal: '7'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -104,7 +104,7 @@ file:
               - raw_comparison_operator: /
               - raw_comparison_operator: '='
               integer_literal: '8'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -114,7 +114,7 @@ file:
               parameter: '@I'
               binary_operator: '%'
               integer_literal: '9'
-        statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       select_statement:
         select_clause:
@@ -126,4 +126,4 @@ file:
               - raw_comparison_operator: '%'
               - raw_comparison_operator: '='
               integer_literal: '10'
-        statement_terminator: ;
+  - statement_terminator: ;

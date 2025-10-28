@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: 637c2e2a32c9698f23f64da4a21fa2b37c69c28ff1082463c9058df30bf7cfaa
+_hash: 5c58b2bfd8dfd85c287267ee52c10cd9b07dda65c880d3839d7c6380d00411f8
 file:
 - batch:
     statement:
@@ -182,7 +182,7 @@ file:
                                 dot: .
                                 quoted_identifier: '[RandomDate]'
                   end_bracket: )
-              statement_terminator: ;
+          statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -211,7 +211,7 @@ file:
                   keyword: RETURN
                   expression:
                     integer_literal: '2'
-                  statement_terminator: ;
+            - statement_terminator: ;
             - keyword: END
     go_statement:
       keyword: GO
@@ -280,6 +280,6 @@ file:
             - naked_identifier: FIN
             keyword: IS
             null_literal: 'NULL'
-        statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO

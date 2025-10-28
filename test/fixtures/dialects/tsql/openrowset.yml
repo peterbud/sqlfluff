@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: a20c572eef8c620d037c11bfbc0b8af93bb35f1ac20f8eeeda3f2ec6af60b7c5
+_hash: e74c6db9299ca41d948c38f0152b80ac1aae74e81d96aff951f1ec9942daf4df
 file:
 - batch:
     statement:
@@ -40,7 +40,7 @@ file:
                 alias_operator:
                   keyword: AS
                 naked_identifier: a
-          statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -74,7 +74,7 @@ file:
                 alias_operator:
                   keyword: AS
                 naked_identifier: d
-          statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -112,7 +112,7 @@ file:
                 alias_operator:
                   keyword: AS
                 naked_identifier: d
-          statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -145,7 +145,7 @@ file:
                 alias_operator:
                   keyword: AS
                 naked_identifier: a
-          statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -175,7 +175,7 @@ file:
                 alias_operator:
                   keyword: AS
                 naked_identifier: DATA
-          statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -205,7 +205,7 @@ file:
                 alias_operator:
                   keyword: AS
                 naked_identifier: Document
-          statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:
@@ -248,7 +248,7 @@ file:
                 alias_operator:
                   keyword: AS
                 naked_identifier: cars
-          statement_terminator: ;
+    statement_terminator: ;
     go_statement:
       keyword: GO
 - batch:

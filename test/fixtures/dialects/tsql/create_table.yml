@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: d19ff97c6f85b263467e76df08d9f755ccfe379bce5d231363467de24e1e74d6
+_hash: 89c7f3f490fa3747ca365b8217d41a2ed4a036d15c8446106c9d34cb788d4a99
 file:
   batch:
   - statement:
@@ -101,7 +101,7 @@ file:
               dot: .
               quoted_identifier: '[custom udt]'
         - end_bracket: )
-      - statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       create_table_statement:
       - keyword: CREATE
@@ -232,7 +232,7 @@ file:
                     data_type_identifier: date
                   end_bracket: )
         - end_bracket: )
-      - statement_terminator: ;
+  - statement_terminator: ;
   - statement:
       create_table_statement:
       - keyword: CREATE
@@ -297,4 +297,4 @@ file:
           - column_constraint_segment:
               keyword: UNIQUE
         - end_bracket: )
-      - statement_terminator: ;
+  - statement_terminator: ;
