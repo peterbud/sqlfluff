@@ -29,6 +29,11 @@ name: "Issue Triage Agent"
     types:
     - opened
     - edited
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue to check'
+        required: true
 
 permissions: {}
 
