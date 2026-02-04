@@ -18,3 +18,5 @@ test/** linguist-vendored=false
 
 # Exclude the rust generated files
 sqlfluffrs/sqlfluffrs_dialects/src/dialect/** linguist-generated
+
+.github/workflows/*.lock.yml linguist-generated=true merge=ours
