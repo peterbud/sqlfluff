@@ -21,7 +21,7 @@
 #
 # Automatically triage incoming issues by analyzing content, detecting issue types, and applying appropriate labels and comments
 #
-# frontmatter-hash: d285141983473ce570cf78f2ef7b9a10bf09871b5ef1cd3fde6b36fbae56a855
+# frontmatter-hash: 50f7783e2f0693ef00d5ed6ea20df87d52c8e4fc87eec288ae308cc6c96a47fc
 
 name: "Issue Triage Agent"
 "on":
@@ -32,8 +32,8 @@ name: "Issue Triage Agent"
   workflow_dispatch:
     inputs:
       issue_number:
-        description: 'Issue to check'
-        required: true
+        description: Issue to check
+        required: false
 
 permissions: {}
 

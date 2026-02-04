@@ -3,6 +3,11 @@ description: Automatically triage incoming issues by analyzing content, detectin
 on:
   issues:
     types: [opened, edited]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue to check'
+        required: false
 roles: all
 permissions:
   contents: read
