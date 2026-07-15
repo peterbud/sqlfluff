@@ -1,83 +1,83 @@
-ansi:
+"dialect:ansi":
   - "/(ansi)/i"
 
-athena:
+"dialect:athena":
   - "/(athena)/i"
 
-bigquery:
+"dialect:bigquery":
   - "/(bigquery)/i"
 
-clickhouse:
+"dialect:clickhouse":
   - "/(clickhouse)/i"
 
-databricks:
+"dialect:databricks":
   - "/(databricks)/i"
 
-db2:
+"dialect:db2":
   - "/(db2)/i"
 
-doris:
+"dialect:doris":
   - "/(doris)/i"
 
-duckdb:
+"dialect:duckdb":
   - "/(duckdb)/i"
 
-exasol:
+"dialect:exasol":
   - "/(exasol)/i"
 
-flink:
+"dialect:flink":
   - "/(flink)/i"
 
-greenplum:
+"dialect:greenplum":
   - "/(greenplum)/i"
 
-hive:
+"dialect:hive":
   - "/(hive)/i"
 
-impala:
+"dialect:impala":
   - "/(impala)/i"
 
-mariadb:
+"dialect:mariadb":
   - "/(mariadb)/i"
 
-materialize:
+"dialect:materialize":
   - "/(materialize)/i"
 
-mysql:
+"dialect:mysql":
   - "/(mysql)/i"
 
-oracle:
+"dialect:oracle":
   - "/(oracle)/i"
 
-postgres:
+"dialect:postgres":
   - "/(postgres)/i"
 
-redshift:
+"dialect:redshift":
   - "/(redshift)/i"
 
-snowflake:
+"dialect:snowflake":
   - "/(snowflake)/i"
 
-soql:
+"dialect:soql":
   - "/(soql)/i"
 
-sparksql:
+"dialect:sparksql":
   - "/(sparksql)/i"
 
-sqlite:
+"dialect:sqlite":
   - "/(sqlite)/i"
 
-starrocks:
+"dialect:starrocks":
   - "/(starrocks)/i"
 
-t-sql:
+"dialect:t-sql":
   - "/(t-sql|tsql)/i"
 
-teradata:
+"dialect:teradata":
   - "/(teradata)/i"
 
-trino:
+"dialect:trino":
   - "/(trino)/i"
 
-vertica:
+"dialect:vertica":
   - "/(vertica)/i"
