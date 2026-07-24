@@ -40,10 +40,22 @@ jobs:
               fs.readFileSync("./agentscan-result/moderation.json", "utf8")
             );
 
-            const eventPrNumber = context.payload.workflow_run?.pull_requests?.[0]?.number;
+            let eventPrNumber = context.payload.workflow_run?.pull_requests?.[0]?.number;
             if (!eventPrNumber) {
-              core.setFailed("No pull request associated with this workflow_run event.");
-              return;
+              // Fork-originated PRs arrive with pull_requests empty; resolve via head SHA.
+              const headSha = context.payload.workflow_run.head_sha;
+              const { data: matchedPRs } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                commit_sha: headSha,
+              });
+              const openPR = matchedPRs.find(pr => pr.state === "open");
+              eventPrNumber = openPR?.number;
+              if (!eventPrNumber) {
+                core.setFailed(`No open pull request found for commit ${headSha}.`);
+                return;
+              }
+              core.info(`Resolved PR #${eventPrNumber} from head SHA ${headSha}.`);
             }
 
             const payloadPrNumber = Number(payload.pr_number);
