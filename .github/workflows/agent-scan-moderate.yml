@@ -40,10 +40,26 @@ jobs:
               fs.readFileSync("./agentscan-result/moderation.json", "utf8")
             );
 
+            const eventPrNumber = context.payload.workflow_run?.pull_requests?.[0]?.number;
+            if (!eventPrNumber) {
+              core.setFailed("No pull request associated with this workflow_run event.");
+              return;
+            }
+
+            const payloadPrNumber = Number(payload.pr_number);
+            if (Number.isFinite(payloadPrNumber) && payloadPrNumber !== eventPrNumber) {
+              core.warning(
+                `Ignoring artifact PR number ${payloadPrNumber}; using event PR number ${eventPrNumber}.`
+              );
+            }
+
             const commentSentinel = "<!-- agentscan:possible-bot-comment:v1 -->";
-            const prNumber = payload.pr_number;
-            const classification = payload.classification;
-            const communityFlagged = Boolean(payload.community_flagged);
+            const prNumber = eventPrNumber;
+            const allowedClassifications = ["organic", "mixed", "automation"];
+            const classification = allowedClassifications.includes(payload.classification)
+              ? payload.classification
+              : "organic";
+            const communityFlagged = payload.community_flagged === true || payload.community_flagged === "true";
             const shouldAct = ["automation", "mixed"].includes(classification) || communityFlagged;
             const shouldClose = classification === "automation" || communityFlagged;
 
